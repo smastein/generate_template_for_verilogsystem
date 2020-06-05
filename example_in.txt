@@ -1,0 +1,22 @@
+module test
+parameter:
+	CNT_MAX = 100
+	CNT_WIDTH = 8
+clock:
+	clk_i, edge=true	
+reset:
+	rst_n_i, polarity=false, synchronous=false
+input:
+	a
+	[31:0]vector
+	[CNT_WIDTH-1:0]vect_in
+output:
+	b, reset_val=1
+	[CNT_WIDTH-1:0]vect_out
+inout:
+	scl
+	sda
+variable:
+	[3:0] sum, default_val=0
+	state
+	
